@@ -14,6 +14,7 @@
 		7D5C608224FF29DA008C0282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5C608024FF29DA008C0282 /* LaunchScreen.storyboard */; };
 		7D5C608A24FF2FA0008C0282 /* CodeTermTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C608924FF2FA0008C0282 /* CodeTermTableViewController.swift */; };
 		7D5C608C24FF6423008C0282 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C608B24FF6423008C0282 /* CodeViewController.swift */; };
+		7D5C608E24FFF6C0008C0282 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C608D24FFF6C0008C0282 /* Term.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7D5C608324FF29DA008C0282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5C608924FF2FA0008C0282 /* CodeTermTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTermTableViewController.swift; sourceTree = "<group>"; };
 		7D5C608B24FF6423008C0282 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		7D5C608D24FFF6C0008C0282 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				7D5C607724FF29D9008C0282 /* SceneDelegate.swift */,
 				7D5C608924FF2FA0008C0282 /* CodeTermTableViewController.swift */,
 				7D5C608B24FF6423008C0282 /* CodeViewController.swift */,
+				7D5C608D24FFF6C0008C0282 /* Term.swift */,
 				7D5C607B24FF29D9008C0282 /* Main.storyboard */,
 				7D5C607E24FF29DA008C0282 /* Assets.xcassets */,
 				7D5C608024FF29DA008C0282 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				7D5C608A24FF2FA0008C0282 /* CodeTermTableViewController.swift in Sources */,
 				7D5C608C24FF6423008C0282 /* CodeViewController.swift in Sources */,
+				7D5C608E24FFF6C0008C0282 /* Term.swift in Sources */,
 				7D5C607624FF29D9008C0282 /* AppDelegate.swift in Sources */,
 				7D5C607824FF29D9008C0282 /* SceneDelegate.swift in Sources */,
 			);
