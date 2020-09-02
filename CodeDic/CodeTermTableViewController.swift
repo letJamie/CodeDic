@@ -10,6 +10,7 @@ import UIKit
 
 class CodeTermTableViewController: UITableViewController {
 
+    
     var terms = ["Bool", "Int", "Double", "String", "Array"]
     
     override func viewDidLoad() {
@@ -37,5 +38,19 @@ class CodeTermTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedTerm = terms[indexPath.row]
+        
+        performSegue(withIdentifier: "goToDefinition", sender: selectedTerm)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let codeVC = segue.destination as! CodeViewController
+        let selectedTerm = sender as! String
+        codeVC.term = selectedTerm
+    }
 
 }

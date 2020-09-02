@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMX-bR-lZa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2aU-i4-wdA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Code Term Table View Controller-->
+        <!--Code Dictionary-->
         <scene sceneID="alR-Y8-lUa">
             <objects>
                 <tableViewController id="zMX-bR-lZa" customClass="CodeTermTableViewController" customModule="CodeDic" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,10 +30,69 @@
                             <outlet property="delegate" destination="zMX-bR-lZa" id="9ec-BR-FE2"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Code Dictionary" id="fkT-bs-Q4n">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ngw-V8-uhk"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="VAU-LD-I6S" kind="show" identifier="goToDefinition" id="458-x3-UCP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBG-uy-Bew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="164"/>
+            <point key="canvasLocation" x="1892.753623188406" y="163.39285714285714"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="Kvj-h1-mU1">
+            <objects>
+                <viewController id="VAU-LD-I6S" customClass="CodeViewController" customModule="CodeDic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4B-JZ-y5j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labeldsfsdfgdfsgdsfgdsfgsdfgsdfgsdfgsdfgsfdgsfdgdfg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Y-B1-WWU">
+                                <rect key="frame" x="20" y="108" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="17K-Oq-3Tj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PkX-ad-glV" firstAttribute="trailing" secondItem="T6Y-B1-WWU" secondAttribute="trailing" constant="20" id="DEu-Tm-d7W"/>
+                            <constraint firstItem="T6Y-B1-WWU" firstAttribute="top" secondItem="PkX-ad-glV" secondAttribute="top" constant="20" id="NAa-Ok-Yqa"/>
+                            <constraint firstItem="T6Y-B1-WWU" firstAttribute="leading" secondItem="PkX-ad-glV" secondAttribute="leading" constant="20" id="SXy-OA-Tb4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PkX-ad-glV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lxe-8E-rh0"/>
+                    <connections>
+                        <outlet property="dicLabel" destination="T6Y-B1-WWU" id="hby-Bf-svp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65y-nU-ZMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cMg-9w-YQP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2aU-i4-wdA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rr5-Y1-dlU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zMX-bR-lZa" kind="relationship" relationship="rootViewController" id="y7o-vd-Zqg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3d-QZ-ElZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="163.39285714285714"/>
         </scene>
     </scenes>
 </document>
