@@ -15,8 +15,11 @@ class CodeTermTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+//
+//        for x in terms {
+//            print(x)
+//        }
+//
     }
 
     // MARK: - Table view data source
